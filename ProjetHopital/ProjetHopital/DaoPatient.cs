@@ -10,7 +10,7 @@ namespace ProjetHopital
 {
     class DaoPatient
     {
-        public Patient selectPatient(int id)
+        public Patient selectById(int id)
         {
 
             Patient p = null;
@@ -33,7 +33,7 @@ namespace ProjetHopital
             return p;
         }
 
-        public bool InsertPatient(Patient p)
+        public bool Insert(Patient p)
         {
             string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=cs-db;Integrated Security=True";
             string sql = "insert into Patients values(@id,@nom,@prenom,@age,@adresse,@telephone)";

@@ -10,7 +10,7 @@ namespace ProjetHopital
 {
     class DaoVisite
     {
-        public bool InsertPatient(Visite v)
+        public bool Insert(Visite v)
         {
             string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=cs-db;Integrated Security=True";
             string sql = "insert into Visites values(@id,@idpatient,@date,@medecin,@num-salle,@tarif)";

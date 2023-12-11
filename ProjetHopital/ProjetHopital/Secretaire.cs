@@ -8,5 +8,6 @@ namespace ProjetHopital
 {
     class Secretaire
     {
+
     }
 }
