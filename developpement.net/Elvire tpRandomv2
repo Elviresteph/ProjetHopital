@@ -1,0 +1,67 @@
+       Random21()
+ Random r = new Random();
+            int nbAleatoire = r.Next(0, 11);
+            Console.WriteLine(nbAleatoire);
+            int nbrtentative = 0;
+            bool boucle = true;
+            Console.WriteLine("Devinez le nb entre 0 et 10:");
+     
+            while (boucle)
+            {
+                int tentativeUtilisateur = Convert.ToInt32(Console.ReadLine());
+                nbrtentative++;
+                if (tentativeUtilisateur == nbAleatoire)
+                {
+                    Console.WriteLine("Bravo vous avez devine le nombre en "+ nbrtentative + " tentative !:");
+                     boucle = false;
+                }
+                else
+                {
+                    if(tentativeUtilisateur < nbAleatoire)
+                    {
+                        Console.WriteLine("cest -  essai incorrect. Essayez encore:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("cest +  essai incorrect. Essayez encore:");
+                    }           
+                }
+            }
+			
+			
+		Random22()
+		
+		
+		Random r = new Random();
+            int nbAleatoire = r.Next(0, 11);
+            Console.WriteLine(nbAleatoire);
+            int nbrtentative = 0;
+            bool boucle = true;
+            Console.WriteLine("Devinez le nb entre 0 et 10:");
+            int nbrMax = 5;
+            while (boucle)
+            {
+                int tentativeUtilisateur = Convert.ToInt32(Console.ReadLine());
+                nbrtentative++;
+                if (tentativeUtilisateur == nbAleatoire)
+                {
+                    Console.WriteLine("Bravo vous avez devine le nombre en " + nbrtentative + " tentative !:");
+                    boucle = false;
+                }
+                else
+                {
+                    if(nbrtentative >= nbrMax)
+                    {                 
+                        Console.WriteLine("game over");
+                        boucle = false;
+                    }
+                    else
+                    {
+                        if (tentativeUtilisateur < nbAleatoire)
+                        {
+                            Console.WriteLine("cest -  essai incorrect. Essayez encore:");
+                        }
+                        else
+                        {
+                            Console.WriteLine("cest +  essai incorrect. Essayez encore:");
+                        }

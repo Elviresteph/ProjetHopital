@@ -1,0 +1,39 @@
+      Console.WriteLine("saisir le nb1");
+            double nb1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("saisir le nb2");
+            double nb2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("1. addition:");
+            Console.WriteLine("2. soustraction:");
+            Console.WriteLine("3. multiplication:");
+            Console.WriteLine("4. division:");
+            Console.WriteLine("choisissez une operation(1-4):");
+            int choix = Convert.ToInt32(Console.ReadLine());
+            double resultat = 0;
+                switch(choix)
+                {
+                case 1:
+                    resultat = nb1 + nb2;
+                    break;
+                case 2:
+                    resultat = nb1 - nb2;
+                    break;
+                case 3:
+                    resultat = nb1 * nb2;
+                    break;
+                case 4:
+                    if(nb2 == 0)
+                    {
+                        resultat = nb1 / nb2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("erreur: division par zero");
+                        return;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("erreur: choix invalide");
+                    return;
+            }
+            Console.WriteLine("resultat: " + resultat);
+        

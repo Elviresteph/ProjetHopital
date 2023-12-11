@@ -1,0 +1,11 @@
+ Console.WriteLine("merci de saisir le chiffre a:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("merci de saisir le chiffre b:");
+            int b = Convert.ToInt32(Console.ReadLine()); ;
+            Console.WriteLine("merci de saisir le chifre c:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            int max = a;
+            string resultat;
+            resultat = a > b ? (a > c ? "a le plus grand avec " + a : "c le plus grand avec " + c) : b > c ? "b le plus grand avec " + b : "c le plus grand avec " + c;
+            Console.WriteLine(resultat);
+);

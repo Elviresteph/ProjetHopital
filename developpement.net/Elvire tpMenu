@@ -1,0 +1,19 @@
+Console.WriteLine("choisir 1.tpInfos 2.tpCalculArticle 3.tpMax 4.tpAge 5.tpTernaire");
+            int saisie = Convert.ToInt32(Console.ReadLine());
+            switch (saisie)
+            {
+                case 1:
+                    tpInfos();
+                    break;
+                case 2:
+                    tpCalculArticle();
+                    break;
+                case 3:
+                    tpMax();
+                    break;
+                case 4:
+                    tpAge();
+                    break;
+                case 5:
+                    tpTernaire();
+                    break;

@@ -1,0 +1,12 @@
+       static void TpPuissancev2(int nombre, int puissance)
+        {
+          
+            int resultat = 1;
+            for (int i = 0; i < puissance; i++)
+            {
+                resultat = resultat * nombre;
+            }
+
+            Console.WriteLine(resultat);
+
+        }

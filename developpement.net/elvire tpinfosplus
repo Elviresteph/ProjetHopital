@@ -1,0 +1,14 @@
+ Console.WriteLine("merci de saisir votre nom");
+            string nom = Console.ReadLine();
+            Console.WriteLine("merci de saisir votre prenom");
+            string prenom = Console.ReadLine();
+            Console.WriteLine("merci de saisir votre annéé de naissance");
+            int anneeNaissance = Convert.ToInt32(Console.ReadLine());
+            int age = 2023 - anneeNaissance;
+            Console.WriteLine("merci de saisir votre taille");
+            double taille = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("merci de saisir votre poids");
+            int poids = Convert.ToInt32(Console.ReadLine());
+
+            string reponse = "nom: "+  nom + "\t" + "prenom: " + prenom + "\n" + "age: "+ age + "\n" + "taille: " + taille + " poids: "  + poids;
+            Console.WriteLine(reponse);

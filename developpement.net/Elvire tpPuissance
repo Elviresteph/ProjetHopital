@@ -1,0 +1,10 @@
+ Console.WriteLine("Saisir un nombre :");
+            int nombre = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Saisir sa puissance :");
+            int puissance = Convert.ToInt32(Console.ReadLine());
+            int resultat = 1;
+            for (int i = 0; i < puissance; i++)
+            {
+                resultat = resultat * nombre;
+            }
+            Console.WriteLine(resultat);

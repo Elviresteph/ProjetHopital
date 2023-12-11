@@ -1,0 +1,16 @@
+Console.WriteLine("merci de saisir la valeur de a:");
+            int a = Convert.ToInt32(Console.ReadLine()); 
+            Console.WriteLine("merci de saisir la valeur de b:");
+            int b = Convert.ToInt32(Console.ReadLine()); ;
+            Console.WriteLine("merci de saisir la valeurs de b:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            int max = a;
+            if(b>max)
+            {
+                max = b;
+            }
+            if(c>max)
+            {
+                max = c;
+            }
+            Console.WriteLine("le maximum entre a b et c est:" +max);

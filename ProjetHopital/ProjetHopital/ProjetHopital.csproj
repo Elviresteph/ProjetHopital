@@ -43,21 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentification.cs" />
-    <Compile Include="DaoAuthentification.cs" />
-    <Compile Include="DaoPatient.cs" />
-    <Compile Include="DaoVisite.cs" />
-    <Compile Include="Hopital.cs" />
-    <Compile Include="Medecin.cs" />
-    <Compile Include="Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Salle.cs" />
-    <Compile Include="Secretaire.cs" />
-    <Compile Include="Visite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dao1\Dao.csproj">
+      <Project>{31663d24-6879-4430-9598-4ca3b85463f7}</Project>
+      <Name>Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion\Gestions.csproj">
+      <Project>{db0a5fb1-625f-45eb-b239-418e8c51fa2f}</Project>
+      <Name>Gestions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,21 @@
+ Console.WriteLine("Saisir la chaîne de caractère :");
+            string chaine = Console.ReadLine();
+
+            Console.WriteLine("Saisir la hauteur :");
+            int hauteur = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Saisir la largeur :");
+            int largeur = Convert.ToInt32(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hauteur; i++)
+            {
+                for (int j = 0; j < largeur; j++)
+                {
+                    sb.Append(chaine + "\t"); // Affiche la chaîne suivie d'une tabulation
+                     
+                }
+                sb.Append("\n");
+            }
+            string resultat = sb.ToString();
+            Console.WriteLine(resultat);

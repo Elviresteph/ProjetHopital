@@ -1,0 +1,21 @@
+      Console.Write("Saisissez une phrase : ");
+            string phrase = Console.ReadLine();
+            string  reponse = traitementText(phrase);
+            Console.Write("reponse: " + reponse.ToUpper());
+            Console.WriteLine();
+
+        }
+
+        static string traitementText(string str)
+        {
+            string[] mots = str.Split(' ');
+            string[] tabStringReverse = Reverse(mots);
+            string reponse = "";
+
+            foreach (string e in tabStringReverse)
+            {
+                reponse = reponse + " " + e;
+            }
+            return reponse;
+        }
+        

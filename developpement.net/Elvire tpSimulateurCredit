@@ -1,0 +1,69 @@
+      C Console.WriteLine("saisir le nb1");
+            double nb1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("saisir le nb2");
+            double nb2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("1. addition:");
+             Console.WriteLine("saisir nom");
+            string nom = Console.ReadLine();
+            Console.WriteLine("merci de saisir votre age");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("saisir votre salaire brut mensuel");
+            double sbrutmen= Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("saisir le montant emprunt");
+            double memp = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(devSimulateurCredit(age, sbrutmen, memp));
+        
+        }
+
+        static string devSimulateurCredit(int age, double sbrutmen, double memp)
+        {
+            // salaire net = salaire brut - 23 % du salaire brut
+            double salaireNet = sbrutmen - (23 * sbrutmen/100);
+            //taux
+            int taux = calculTaux(age);
+            if(taux != 0)
+            {
+                if (memp < taux * salaireNet) {
+
+                    double remboursementTotal = memp  +  3 * memp / 100;
+
+                    return "ok le remboursement se fera sur 1 an avec une taxe de 3 %, remboursement total: " + remboursementTotal;
+                }
+                else
+                {
+                    return "erreur";
+                }
+            }
+            else
+            {
+                return "erreur";
+            }
+            /*il faut que montant emprunté < taux * salaire_annuel_net
+             * si cest ok le remboursement se fera sur 1 an avec une taxe de 3 %, qui sera affiché a la utilisateur
+            l emprunt ne peut se faire que entre 18 et 70 sinon erreur,*/
+
+        }
+
+        static int calculTaux(int age)
+        {
+            //regle: 18 - 30 - 15  31 - 50 - 20  51 - 70 - 10
+            int taux;
+
+            if (age >= 18 && age <= 30)
+            {
+                taux = 15; 
+            }
+            else if(age>=31 && age<=50)
+            {
+                taux = 20;
+            }
+            else if (age >= 51 && age <= 70)
+            {
+                taux = 10;
+            }
+            else
+            {
+                taux = 0;
+            }
+            return taux;

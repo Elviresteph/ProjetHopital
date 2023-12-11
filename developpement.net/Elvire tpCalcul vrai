@@ -1,0 +1,39 @@
+      C Console.WriteLine("saisir le nb1");
+            double nb1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("saisir le nb2");
+            double nb2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("1. addition:");
+            Console.WriteLine("2. soustraction:");
+            Console.WriteLine("3. multiplication:");
+            Console.WriteLine("4. division:");
+            Console.WriteLine("choisissez une operation(1-4):");
+            int choix = Convert.ToInt32(Console.ReadLine());
+
+            string resultat = Operation(nb1, nb2, choix);
+
+            Console.WriteLine(resultat);
+
+        }
+
+        static string Operation(double nb1, double nb2, int ope) { 
+
+            switch (ope)
+            {
+                case 1:          
+                    return Convert.ToString(Add(nb1, nb2));
+                case 2:
+                    return Convert.ToString(sous(nb1, nb2));
+                case 3:
+                    return Convert.ToString(Multi(nb1, nb2));
+                case 4:
+                    if (nb2 != 0)
+                    {
+                        return Convert.ToString(Div(nb1, nb2));
+                    }
+                    else
+                    {
+                        return "err";
+                    }
+                default:
+                    return "err2";
+        

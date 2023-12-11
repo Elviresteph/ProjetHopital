@@ -1,0 +1,21 @@
+ Random r = new Random();
+        int nbAleatoire = r.Next(0, 11);
+        int tentative = 0;
+        Console.WriteLine("Devinez le nb entre 0 et 10:");
+        bool boucle = true;
+
+        while (boucle)
+        {
+            int tentativeUtilisateur = Convert.ToInt32(Console.ReadLine());
+             tentative ++;
+            if (tentativeUtilisateur == nbAleatoire)
+            {
+                Console.WriteLine("Bravo vous avez devine le nombre en "+ tentative + " tentative !:");
+                 boucle = false;
+            }
+            else
+            {
+                Console.WriteLine("essai incorrect. Essayez encore:");
+            }
+
+        }

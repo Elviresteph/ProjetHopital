@@ -1,0 +1,22 @@
+      onsole.WriteLine("saisir marque");//zara
+            string marque = Console.ReadLine();
+
+            Console.WriteLine("saisir prix  ht avant promo");//10
+            double prixHt = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("saisir  tva");//20
+            double tva = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("saisir  la reduction");
+            double reduction = Convert.ToDouble(Console.ReadLine());//25
+
+            double prixfinal = devCalculArticle1(prixHt, tva, reduction);
+            Console.WriteLine("prix final marque est: " + prixfinal);
+        }
+
+        static double devCalculArticle1(double prixHt, double tva, double reduction)
+        {
+            double prixttc = prixHt * (1 + (tva / 100));
+            double prixfinal = prixttc * (1 - reduction / 100);
+            return prixfinal;
+        }

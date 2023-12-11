@@ -1,0 +1,10 @@
+ Console.WriteLine("merci de saisir la marque de l'article");
+            string marque = Console.ReadLine();
+            Console.WriteLine("merci de saisir le prix ht");
+            double prixHt = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("merci de saisir la tva a appliquer(entier en %)");
+            int tva = Convert.ToInt32(Console.ReadLine());
+            double prixTTC = prixHt + (prixHt * tva/100);
+            double prixTTCRemise = prixTTC - (prixTTC * 25 / 100);
+            string reponse = "marque: " + marque + "\n" + "prix ht: " + prixHt + "\n" + "prix ttc: " + prixTTC + "\n" + "prix ttc apres reduction: " + prixTTCRemise;
+            Console.WriteLine(reponse);

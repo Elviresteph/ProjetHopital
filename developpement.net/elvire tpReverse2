@@ -1,0 +1,47 @@
+   static void tpReverse()
+        {
+            int[] tabInt = {1,2,3,4,5};
+            string[] tabString = { "aa", "bb", "cc", "dd" };
+            int[] tabIntReverse = Reverse(tabInt);
+            string[] tabStringReverse = Reverse(tabString);
+
+            Affiche(tabInt);
+            Affiche(tabIntReverse);
+            Affiche(tabString);
+            Affiche(tabStringReverse);
+        }
+
+        static int[] Reverse(int[] x)
+        {
+            int[] y = new int[x.Length];
+
+            for (int i = 0; i < y.Length; i++)
+                y[i] = x[(y.Length - 1) - i];
+            return y;
+
+        }
+
+        static string[] Reverse(string[] x)
+        {
+            string[] y = new string[x.Length];
+
+            for (int i = 0; i < y.Length; i++)
+                y[i] = x[(y.Length - 1) - i];
+            return y;
+
+        }
+        static void Affiche(int[] x)
+        {
+
+            foreach (int e in x)
+                Console.Write(e + "\t");
+            Console.WriteLine();
+        }
+        static void Affiche(string[] x)
+        {
+
+            foreach (string e in x)
+                Console.Write(e + "\t");
+            Console.WriteLine();
+        }
+

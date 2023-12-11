@@ -1,0 +1,21 @@
+Console.WriteLine("merci de saisir votre nom:");
+            string nom = Console.ReadLine();
+            Console.WriteLine("merci de saisir votre age:");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if(age>0 && age<18)
+            {
+                Console.WriteLine("je suis mineur");
+            }
+            else if(age>=18 && age<50)
+            {
+                Console.WriteLine("je suis majeur");
+            }
+            else if(age>=50 && age<=120)
+            {
+                Console.WriteLine("je suis senior");
+            }
+            else
+            {
+                Console.WriteLine("je suis status erreur");
+            }

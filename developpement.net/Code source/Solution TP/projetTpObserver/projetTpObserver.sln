@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34112.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projetTpObserver", "projetTpObserver.csproj", "{CEF22510-974B-480C-9753-045B898EC6CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEF22510-974B-480C-9753-045B898EC6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF22510-974B-480C-9753-045B898EC6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF22510-974B-480C-9753-045B898EC6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF22510-974B-480C-9753-045B898EC6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAA33B5B-7011-414B-BE13-91C63A307E5F}
+	EndGlobalSection
+EndGlobal

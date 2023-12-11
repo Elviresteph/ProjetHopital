@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.34112.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetHopital", "ProjetHopital\ProjetHopital.csproj", "{0C79F1EB-DDF9-41A1-87AA-24F753457B82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dao", "Dao1\Dao.csproj", "{31663D24-6879-4430-9598-4CA3B85463F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestions", "Gestion\Gestions.csproj", "{DB0A5FB1-625F-45EB-B239-418E8C51FA2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0C79F1EB-DDF9-41A1-87AA-24F753457B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C79F1EB-DDF9-41A1-87AA-24F753457B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C79F1EB-DDF9-41A1-87AA-24F753457B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31663D24-6879-4430-9598-4CA3B85463F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31663D24-6879-4430-9598-4CA3B85463F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31663D24-6879-4430-9598-4CA3B85463F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31663D24-6879-4430-9598-4CA3B85463F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0A5FB1-625F-45EB-B239-418E8C51FA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0A5FB1-625F-45EB-B239-418E8C51FA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0A5FB1-625F-45EB-B239-418E8C51FA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0A5FB1-625F-45EB-B239-418E8C51FA2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
