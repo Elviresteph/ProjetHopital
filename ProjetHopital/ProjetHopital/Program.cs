@@ -10,17 +10,27 @@ namespace ProjetHopital
     {
         static void Main(string[] args)
         {
-            string login = "elvire";
-            string mdp = "1234";
-            //Authentification a = new Authentification(login, mdp);
-            //DaoAuthentification d = new DaoAuthentification();
-            //Authentification  o = d.connexion(a);
+           
+            
+        }
 
+        public void test()
+        {
+            string login = "mps";
+            string mdp = "123654";
 
             DaoAuthentification d = new DaoAuthentification();
             Authentification o = d.connexion(login, mdp);
+            Console.WriteLine(o);
+        }
 
+        public void testMenu()
+        {
 
         }
+
+
     }
+
+    
 }

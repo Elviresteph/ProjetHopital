@@ -55,5 +55,29 @@ namespace ProjetHopital
 
             return a;
         }
+
+        public bool InsertAuthentification(Authentification aut)
+        {
+            string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=HOPITAL;Integrated Security=True";
+            string sql = "insert into Authentification values(@login,@password,@nom,@metier)";
+
+
+            SqlConnection connection1 = new SqlConnection(connectionString);
+            SqlCommand command = connection1.CreateCommand();
+            command.CommandText = sql;
+
+            command.Parameters.Add("login", SqlDbType.NVarChar).Value = aut.login;
+            command.Parameters.Add("password", SqlDbType.NVarChar).Value = aut.password;
+            command.Parameters.Add("nom", SqlDbType.NVarChar).Value = aut.nom;
+            command.Parameters.Add("metier", SqlDbType.Int).Value = aut.metier;
+
+
+
+            connection1.Open();
+            command.ExecuteNonQuery();
+            connection1.Close();
+
+            return true;
+        }
     }
 }
