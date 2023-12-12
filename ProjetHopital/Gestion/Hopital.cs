@@ -11,13 +11,14 @@ namespace Gestions
         private static Hopital instance = null;
         private Queue<Patients> fileAttente = new Queue<Patients>();
 
-        private Hopital()
+        public Hopital()
         {
 
         }
         public void Add(Patients p)
         {
             fileAttente.Enqueue(p);
+          
         }
         public Patients Remove()
         {
@@ -45,9 +46,12 @@ namespace Gestions
                 return instance;
             }
         }
-        public void TestStr()
+
+        public void AfficheList()
         {
-            Console.WriteLine("je teste");
+            Console.WriteLine("id" + "\t" + "Nom" + "\t" + "Prenom" + "\t" + "Telephone");
+            foreach (Patients p in fileAttente)
+                Console.WriteLine(p.Id + "\t" + p.Nom + "\t" + p.Prenom + "\t" + p.Telephone);
         }
     }
 }

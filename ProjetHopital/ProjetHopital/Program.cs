@@ -36,8 +36,8 @@ namespace ProjetHopital
                 {
 
                     case 0:
-                        //afficherMenuSecretaire(utilisateur);
-                        Console.WriteLine("Menu pour secrétaire");
+                        afficherMenuSecretaire(utilisateurAuthentifie);
+                        
 
                         break;
 
@@ -85,11 +85,7 @@ namespace ProjetHopital
                 switch (choixSec)
                 {
                     case 1:
-                        // Logique pour ajouter un patient à la file d'attente
-
-
-                        //ajouterPatientEnAttente(utilisateurAuthentifie);
-
+                        ajouterPatient();
                         break;
 
                     case 2:
@@ -111,8 +107,7 @@ namespace ProjetHopital
                         break;
                     case 5:
                         // Logique pour Quitter l'interface secrétaire et revenir au menu principal
-                        Console.WriteLine("Retour au menu principal.");
-                        afficherMenuSecretaire(utilisateurAuthentifie);
+                        afficherListeAttente();
                         break;
 
                     default:
@@ -121,6 +116,44 @@ namespace ProjetHopital
                 }
 
             } while (choixSec != 5);
+
+        }
+
+        static void ajouterPatient()
+        {
+            // Exemple d'ajout de patient à la file d'attente
+            Console.WriteLine("Entrez le numeros de secu du patient : ");
+            int numSecu = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Entrez le nom du patient : ");
+            string nomPatient = Console.ReadLine();
+            Console.WriteLine("Entrez le prenom du patient : ");
+            string prenomPatient = Console.ReadLine();
+            Console.WriteLine("Entrez l'age du patient : ");
+            int agePatient = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Entrez l'adresse du patient : ");
+            string adressePatient = Console.ReadLine();
+            Console.WriteLine("Entrez telephone du patient : ");
+            string telephonePatient = Console.ReadLine();
+
+            DaoPatient Daop = new DaoPatient();
+            Patients p = new Patients(numSecu, nomPatient, prenomPatient, agePatient, adressePatient, telephonePatient);
+
+            Patients pselect = Daop.selectById(numSecu);
+
+            if(pselect == null)
+            {
+                Daop.Insert(p);
+            }
+
+            Hopital hopital = new Hopital();
+
+            hopital.Add(p);
+        }
+
+        static void afficherListeAttente() {
+
+            Hopital hopital = new Hopital();
+            hopital.AfficheList();
 
         }
 

@@ -9,14 +9,14 @@ using Gestions;
 
 namespace Dao
 {
-    class DaoPatient
+    public class DaoPatient
     {
         public Patients selectById(int id)
         {
 
             Patients p = null;
             string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=HOPITAL;Integrated Security=True";
-            string sql = "select * from Patient where Id= '" + id;
+            string sql = "select * from Patients where Id= '" + id +"'";
 
             SqlConnection connection1 = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand(sql, connection1);
@@ -36,7 +36,7 @@ namespace Dao
 
         public bool Insert(Patients p)
         {
-            string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=cs-db;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-AD02GFS;Initial Catalog=HOPITAL;Integrated Security=True";
             string sql = "insert into Patients values(@id,@nom,@prenom,@age,@adresse,@telephone)";
 
 
